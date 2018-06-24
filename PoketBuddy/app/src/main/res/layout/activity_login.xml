@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="#fff"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/colorLogo"
+            android:src="@drawable/color_logo" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="374dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="50dp"
+        android:paddingTop="30dp">
+
+        <EditText
+            android:id="@+id/InputId"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@layout/txtedit_border"
+            android:hint="ID"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColor="#fff"
+            android:textColorHint="#aaa" />
+
+        <EditText
+            android:id="@+id/InputPw"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:background="@layout/txtedit_border"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:hint="Password"
+            android:textColorHint="#aaa"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="136dp"
+            android:background="@layout/txtedit_border"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:id="@+id/loginbtn"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginbtn"
+            android:layout_centerHorizontal="true"
+            android:background="#fff"
+            android:text="Create a new account"
+            android:textAlignment="center"
+            android:textColor="#595957"
+            android:id="@+id/newaccbtn"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+</RelativeLayout>

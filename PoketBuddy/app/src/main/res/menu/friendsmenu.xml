@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item
+        android:id="@+id/media_route_menu_item"
+        android:icon="@drawable/hamburger"
+        android:visible="true"
+        android:title=""
+        app:showAsAction="always" />-->
+    <!--<item
+        android:id="@+id/home"
+        android:title="HOME"
+        app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/add"
+        android:title="ADD FREIND"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/edit"
+        android:title="EDIT FREIND"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/find"
+        android:title="FIND FREIND"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/remove"
+        android:title="REMOVE FREIND"
+        app:showAsAction="never"/>
+</menu>

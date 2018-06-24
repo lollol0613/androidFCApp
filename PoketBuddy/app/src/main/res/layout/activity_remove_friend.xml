@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveFriend"
+    android:background="#fff">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="REMOVE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    <EditText
+        android:id="@+id/nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_marginTop="59dp"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/findbtn"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/nametxt"
+        android:layout_centerHorizontal="true"
+        android:background="@layout/txtedit_border"
+        android:text="SEARCH"
+        android:textColor="#fff"
+        android:textSize="15dp" />
+    <EditText
+        android:id="@+id/rname"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="218dp"
+        android:background="@layout/txtedit_border"
+        android:hint="Name"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#aaa"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/rphone"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="225dp"
+        android:background="@layout/txtedit_border"
+        android:hint="Phone no."
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#aaa"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/rgen"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="188dp"
+        android:background="@layout/txtedit_border"
+        android:hint="Gender"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#aaa"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/rpros"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="111dp"
+        android:background="@layout/txtedit_border"
+        android:hint="Profession"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#aaa"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/rquals"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        android:background="@layout/txtedit_border"
+        android:hint="Qualification"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#aaa"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/raddress"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:background="@layout/txtedit_border"
+        android:hint="Address"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#aaa"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@layout/cancelbtn_border"
+        android:text="DELETE"
+        android:textColor="#ff0000"
+        android:textSize="15dp" />
+
+</RelativeLayout>

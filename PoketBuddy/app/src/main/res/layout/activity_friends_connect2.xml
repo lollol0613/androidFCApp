@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendsConnect"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/menubtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/hamburger"
+            android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/home"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

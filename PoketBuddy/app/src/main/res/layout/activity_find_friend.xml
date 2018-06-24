@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindFriend"
+    android:background="#fff">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="FIND"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    <EditText
+        android:id="@+id/nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"/>
+    <Button
+        android:id="@+id/findbtn"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/nametxt"
+        android:layout_centerHorizontal="true"
+        android:background="@layout/txtedit_border"
+        android:text="SEARCH"
+        android:textColor="#fff"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/rname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="143dp"
+        android:ems="10"
+        android:textColor="#595957"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+
+    <ImageButton
+        android:id="@+id/callbtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/rphone"
+        android:layout_toStartOf="@+id/nametxt"
+        android:scaleType="centerInside"
+        android:src="@drawable/call"
+        android:background="#fff"/>
+    <EditText
+        android:id="@+id/rphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="138dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <ImageButton
+        android:id="@+id/smsbtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/raddress"
+        android:layout_toStartOf="@+id/nametxt"
+        android:background="#fff"
+        android:scaleType="centerInside"
+        android:src="@drawable/sms" />
+
+    <ImageButton
+        android:id="@+id/mapbtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        android:layout_toStartOf="@+id/nametxt"
+        android:background="#fff"
+        android:scaleType="centerInside"
+        android:src="@drawable/location" />
+    <EditText
+        android:id="@+id/raddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rphone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-138dp"
+        android:ems="10"
+        android:inputType="text" />
+</RelativeLayout>

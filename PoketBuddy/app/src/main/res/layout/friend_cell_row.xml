@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:weightSum="4"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:src="@drawable/common" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center|center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/userTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_alignParentTop="true"
+            android:text="Username"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/userPhone"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userTitle"
+            android:text="User Email" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="126dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/call"
+            android:layout_margin="5dp" />
+        <Button
+            android:id="@+id/btnSMS"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/sms"
+            android:layout_margin="5dp" />
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/location"
+            android:layout_margin="5dp" />
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

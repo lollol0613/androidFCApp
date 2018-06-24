@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindFriend"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/header"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/menubtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/hamburger"
+            android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#00ffffff"
+            android:scaleType="centerInside"
+            android:src="@drawable/home"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:text="EDIT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:id="@+id/searchView"
+        android:paddingBottom="30dp">
+        <EditText
+            android:id="@+id/nametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:layout_marginTop="59dp"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:id="@+id/findbtn"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/nametxt"
+            android:layout_centerHorizontal="true"
+            android:background="@layout/txtedit_border"
+            android:text="SEARCH"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView">
+
+        <EditText
+            android:id="@+id/rname"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@layout/txtedit_border"
+            android:hint="Name"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="#aaa"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/rphone"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rname"
+            android:layout_marginBottom="10dp"
+            android:background="@layout/txtedit_border"
+            android:hint="Phone no."
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="#aaa"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/rgen"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/rphone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@layout/txtedit_border"
+            android:hint="Gender"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="#aaa"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/rpros"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rgen"
+            android:layout_marginBottom="10dp"
+            android:background="@layout/txtedit_border"
+            android:hint="Profession"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="#aaa"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/rquals"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rpros"
+            android:layout_marginBottom="10dp"
+            android:background="@layout/txtedit_border"
+            android:hint="Qualification"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="#aaa"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/raddress"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rquals"
+            android:layout_marginBottom="30dp"
+            android:background="@layout/txtedit_border"
+            android:hint="Address"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="#aaa"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/updatebtn"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/raddress"
+            android:background="@layout/cancelbtn_border"
+            android:text="UPDATE"
+            android:textColor="#ff0000"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</RelativeLayout>
