@@ -2,14 +2,15 @@ package com.example.raina.poketbuddy;
 
 
 import android.content.Intent;
-//import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+//import android.support.v7.app.ActionBar;
 
 
 public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,6 +38,15 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
         db = new DataBaseHelperM(this, "FMember.db", null, 1);
         init();
+
+        homebtn = (ImageButton)findViewById(R.id.homebtn);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void init() {
@@ -52,10 +62,6 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.cancelbtn:
                 clear();
-                break;
-            case R.id.homebtn:
-                Intent intent = new Intent(SignupActivity.this, MainActivity.class);
-                startActivity(intent);
                 break;
         }
     }

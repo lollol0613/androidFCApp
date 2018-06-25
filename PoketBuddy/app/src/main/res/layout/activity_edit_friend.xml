@@ -86,6 +86,7 @@
             android:hint="Name"
             android:inputType="text"
             android:paddingLeft="10dp"
+            android:textColor="#fff"
             android:textColorHint="#aaa"
             android:textSize="15sp" />
 
@@ -93,13 +94,14 @@
             android:id="@+id/rphone"
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/rname"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:background="@layout/txtedit_border"
             android:hint="Phone no."
             android:inputType="text"
             android:paddingLeft="10dp"
+            android:textColor="#fff"
             android:textColorHint="#aaa"
             android:textSize="15sp" />
 
@@ -114,6 +116,7 @@
             android:hint="Gender"
             android:inputType="text"
             android:paddingLeft="10dp"
+            android:textColor="#fff"
             android:textColorHint="#aaa"
             android:textSize="15sp" />
 
@@ -121,13 +124,14 @@
             android:id="@+id/rpros"
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/rgen"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:background="@layout/txtedit_border"
             android:hint="Profession"
             android:inputType="text"
             android:paddingLeft="10dp"
+            android:textColor="#fff"
             android:textColorHint="#aaa"
             android:textSize="15sp" />
 
@@ -135,13 +139,14 @@
             android:id="@+id/rquals"
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/rpros"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:background="@layout/txtedit_border"
             android:hint="Qualification"
             android:inputType="text"
             android:paddingLeft="10dp"
+            android:textColor="#fff"
             android:textColorHint="#aaa"
             android:textSize="15sp" />
 
@@ -149,13 +154,14 @@
             android:id="@+id/raddress"
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/rquals"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="30dp"
             android:background="@layout/txtedit_border"
             android:hint="Address"
             android:inputType="text"
             android:paddingLeft="10dp"
+            android:textColor="#fff"
             android:textColorHint="#aaa"
             android:textSize="15sp" />
 

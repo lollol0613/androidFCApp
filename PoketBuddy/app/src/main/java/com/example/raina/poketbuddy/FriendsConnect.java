@@ -1,24 +1,22 @@
 package com.example.raina.poketbuddy;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
-//import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+//import android.support.v7.app.ActionBar;
 
 public class FriendsConnect extends AppCompatActivity {
 
@@ -51,11 +49,16 @@ public class FriendsConnect extends AppCompatActivity {
         friendAdapter = new FriendListAdapter(userList);
 
         recyclerView.setAdapter(friendAdapter);
+        Intent intent = getIntent();
         friendAdapter.setOnItemClickListener(new FriendListAdapter.ClickListener() {
             @Override
+            @SuppressLint("MissingPermission")
             public void onItemClick(View v, int position) {
                 Friend friend = FriendsConnect.this.userList.get(position);
-                Toast.makeText(FriendsConnect.this, "You clicked on : " + friend.getName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:+64-"+friend.getPhone_number().toString()));
+                startActivity(intent);
+                //Toast.makeText(FriendsConnect.this, "You clicked on : " + friend.getName(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

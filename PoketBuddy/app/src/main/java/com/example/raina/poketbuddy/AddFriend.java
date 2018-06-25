@@ -2,21 +2,17 @@ package com.example.raina.poketbuddy;
 
 
 import android.content.Intent;
-//import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
-import static android.widget.Toast.LENGTH_SHORT;
+//import android.support.v7.app.ActionBar;
 
 public class AddFriend extends AppCompatActivity implements View.OnClickListener{
 
@@ -160,6 +156,7 @@ public class AddFriend extends AppCompatActivity implements View.OnClickListener
         String adds = address.getText().toString();
 
         boolean status =  db.saver(names,phones,genders,qlfs,pros,adds);
+
         if(status)
             Toast.makeText(this,"Record Inserted",Toast.LENGTH_SHORT).show();
 
@@ -174,12 +171,12 @@ public class AddFriend extends AppCompatActivity implements View.OnClickListener
         EditText profession = (EditText)findViewById(R.id.pf);
         EditText address = (EditText)findViewById(R.id.address);
 
-        fname.setText(" ");
-        phone.setText(" ");
-        gender.setText(" ");
-        qualification.setText(" ");
-        profession.setText(" ");
-        address.setText(" ");
+        fname.setText("");
+        phone.setText("");
+        gender.setText("");
+        qualification.setText("");
+        profession.setText("");
+        address.setText("");
     }
 }
 

@@ -1,28 +1,33 @@
 package com.example.raina.poketbuddy;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-//import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
-import android.widget.TextView;
-import android.widget.Toast;
+
+//import android.support.v7.app.ActionBar;
 
 public class FindFriend extends AppCompatActivity implements View.OnClickListener {
 
     public DataBaseHelper db;
     boolean status;
-    EditText rphone, raddress,name;
-    TextView rname;
+    EditText name, rname, rphone, rsms, raddress;
+    ImageView profileimg;
+    public ImageButton mapbtn, callbtn, smsbtn;
+    public Button findbtn;
     //private ActionBar toolbar;
+
+    //public static final String phoneno="com.example.raina.poketbuddy.phoneno";
+    //public static final String fname = "com.example.raina.poketbuddy.fname";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,30 @@ public class FindFriend extends AppCompatActivity implements View.OnClickListene
 
         db = new DataBaseHelper(this, "Friend.db", null, 1);
         init();
+        /*
+        findbtn = (Button) findViewById(R.id.findbtn);
+        findbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText name = (EditText) findViewById(R.id.nametxt);
+                String n = name.getText().toString();
+
+                Friend friend = db.queryPersonByName(n);
+
+                if(friend.getstatus()) {
+                    EditText rname = (EditText) findViewById(R.id.rname);
+                    EditText rphone = (EditText) findViewById(R.id.rphone);
+                    EditText raddress = (EditText) findViewById(R.id.raddress);
+
+                    rname.setText(friend.getName());
+                    rphone.setText(friend.getPhone_number());
+                    raddress.setText(friend.getAddress());
+
+                } else {
+                    Toast.makeText(FindFriend.this, "Record Not Found", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });*/
 
         ImageButton hbtn = (ImageButton) findViewById(R.id.homebtn);
         ImageButton btn = (ImageButton) findViewById(R.id.menubtn);
@@ -89,15 +118,50 @@ public class FindFriend extends AppCompatActivity implements View.OnClickListene
                 startActivity(intent);
             }
         });
+        mapbtn = (ImageButton) findViewById(R.id.map);
+        callbtn = (ImageButton)findViewById(R.id.call);
+        smsbtn = (ImageButton) findViewById(R.id.sms);
+
+        rphone= (EditText) findViewById(R.id.rphone);
+        Intent intent = getIntent();
+
+        callbtn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("MissingPermission")
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:+64-"+rphone.getText().toString()));
+                startActivity(intent);
+            }
+        });
+        smsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:+64-"+rphone.getText().toString()));
+                intent.putExtra("sms_body", "The SMS text here");
+                startActivity(intent);
+            }
+        });
+        mapbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FindFriend.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
     private void init() {
-        rname = (TextView) findViewById(R.id.rname);
+        rname = (EditText) findViewById(R.id.rname);
         rphone = (EditText) findViewById(R.id.rphone);
+        rsms = (EditText) findViewById(R.id.rsms);
         raddress = (EditText) findViewById(R.id.raddress);
         name = (EditText) findViewById(R.id.nametxt);
+        profileimg = (ImageView) findViewById(R.id.profilepc);
 
         findViewById(R.id.findbtn).setOnClickListener(this);
     }
+
     @Override
     public void onClick(View v) {
 
@@ -108,12 +172,18 @@ public class FindFriend extends AppCompatActivity implements View.OnClickListene
         }
     }
     public void find() {
+
         String n = name.getText().toString();
         final Friend friend = db.queryPersonByName(n);
 
+        profileimg.setImageResource(R.drawable.common);
         rname.setText(friend.getName());
         rphone.setText(friend.getPhone_number());
+        rsms.setText(friend.getPhone_number());
         raddress.setText(friend.getAddress());
+
+            //String pno = rphone.getText().toString();
+            //String n1 = rname.getText().toString();
     }
     /*
     @Override

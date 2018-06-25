@@ -29,8 +29,6 @@ public class FriendListAdapter extends RecyclerView.Adapter<FriendListAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.mTxtName.setText(friendList.get(position).getName());
         holder.mTxtPhone.setText(friendList.get(position).getPhone_number());
-
-
     }
 
     @Override
