@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class RemoveFriend extends AppCompatActivity implements View.OnClickListener {
     ImageButton imageButton;
     public DataBaseHelper db;
-    EditText name, rname, rphone, raddress;
+    EditText name, rname, rphone, rgen, rpros, rquals, raddress;
     boolean s;
     //private ActionBar toolbar;
 
@@ -86,6 +86,14 @@ public class RemoveFriend extends AppCompatActivity implements View.OnClickListe
     }
 
     private void init() {
+        rname = (EditText) findViewById(R.id.rname);
+        rphone = (EditText) findViewById(R.id.rphone);
+        raddress = (EditText) findViewById(R.id.raddress);
+        rpros = (EditText) findViewById(R.id.rpros);
+        rgen = (EditText) findViewById(R.id.rgen);
+        rquals = (EditText) findViewById(R.id.rquals);
+        name = (EditText) findViewById(R.id.nametxt);
+
         findViewById(R.id.findbtn).setOnClickListener(this);
         findViewById(R.id.deletebtn).setOnClickListener(this);
     }
@@ -104,16 +112,14 @@ public class RemoveFriend extends AppCompatActivity implements View.OnClickListe
     }
 
     public void find() {
-        name = (EditText) findViewById(R.id.nametxt);
-        rname = (EditText) findViewById(R.id.rname);
-        rphone = (EditText) findViewById(R.id.rphone);
-        raddress = (EditText) findViewById(R.id.raddress);
-
         String n = name.getText().toString();
-        Friend friend = db.queryPersonByName(n);
+        final Friend friend = db.queryPersonByName(n);
 
         rname.setText(friend.getName());
         rphone.setText(friend.getPhone_number());
+        rgen.setText(friend.getGender());
+        rpros.setText(friend.getProfession());
+        rquals.setText(friend.getQul());
         raddress.setText(friend.getAddress());
     }
 
