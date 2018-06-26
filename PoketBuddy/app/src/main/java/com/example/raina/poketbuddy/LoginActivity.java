@@ -1,24 +1,19 @@
 package com.example.raina.poketbuddy;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-//import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //private ActionBar toolbar;
     Button newAccBtn, loginbtn;
     public DataBaseHelperM db;
     boolean status;
     EditText InputId, InputPw;
-
-    //String username = "test", password = "1234";
 
     String username, password;
 
